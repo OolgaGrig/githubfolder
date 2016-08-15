@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<form  class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+		<div class="form-group">
+			<label>Прізвище</label>
+			<input name="username" type="text" placeholder="input login" class="form-control" 
+			ng-model="cartorder.username">
+		</div>
+		<div class="form-group">
+			<label>Пошта</label>
+			<input name="mail" type="text" placeholder="input mail" class="form-control" 
+			ng-model="cartorder.mail">
+		</div>
+		<div class="form-group">
+			<label>Телефон</label>
+			<input name="phone" type="text" placeholder="input mail" class="form-control"
+			ng-model="cartorder.phone">
+		</div>
+		<div class="form-group">
+			<label>Адрес</label>
+			<input name="adress" type="text" placeholder="input mail" class="form-control"
+			ng-model="cartorder.adress">
+		</div>
+		<div class="form-group">
+			<input type="button" value="Відправити" class="btn btn-success form-control" 
+			ng-click="sendCartOrder(cartorder)">
+		</div>
+		</form>
+	</div>
+</div>

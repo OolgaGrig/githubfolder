@@ -1,0 +1,15 @@
+<div class="row">
+  			<div class="col-sm-6 col-md-4"ng-repeat="item in products">
+    			<div class="thumbnail shopThumbnail" >
+     			 <img src="{{item.path}}" alt="Фото відсутнє...">
+      				<div class="caption">
+       				 <h4>{{item.name}} {{item.descname}}</h4>
+        				<p>{{item.category}}</p>
+        				<h4>{{item.price|salaryFilter:"грн."}}</h4>
+        <p><a href="#" class="btn btn-sm btn-success" role="button" ng-click="addProductCart(item)">
+        <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+         Купити</a> </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<html ng-app="MainApp">
+<head>
+	<title>Адміністрування</title>
+	<meta charset="utf-8">
+	<script src="Lib/angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="Lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Lib/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="Lib/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="Lib/style.css">
+	<script src="Modules/cart.js"></script>
+	<script src="Modules/product.js"></script>
+	<script src="Modules/main.js"></script>
+	<script src="Modules/order.js"></script>
+	
+	<body ng-controller="MainCtrl" class="adminBody">
+	<div class="container">
+	<div class="adminPanel">
+		<ul class="nav nav-pills">
+  			<li role="presentation" class="active"><a href="#" ng-click="showAdminProduct()" 
+  			add-class="active">Товари</a></li>
+  			<li role="presentation"><a href="#" ng-click="showAdminOrder()" 
+  			add-class="active" >Замовлення</a></li>
+		</ul>
+	</div>
+	</div>
+	
+	<div ng-controller="ProductCtrl" class="container">
+	<div class="adminPanel">	
+		<ng-include src="'Views/adminproduct.html'" ng-show="currentView=='adminProduct'"></ng-include>
+		<ng-include src="'Views/editproduct.html'" ng-show="currentView=='editProduct'"></ng-include>
+		<div ng-controller="OrderCtrl"><ng-include src="'Views/adminorder.html'" ng-show="currentView=='adminOrder'"> </ng-include></div>
+	</div>
+	</body>

@@ -1,0 +1,38 @@
+<table class="table table-striped table-bordered adminTable">
+		<tr>
+			<th>Назва товару</th>
+			<th>Кількість товару</th>
+			<th>Ціна</th>
+			<th>Видалити</th>
+			
+		</tr>
+		<tr ng-repeat="item in cart">
+			<td>{{item.name}} {{item.descname}}</td>
+			<td>
+			<button ng-click="cartPlusCount(item)">+</button>
+			{{item.newcount}}
+			<button ng-click="cartMinesCount(item)">-</button>
+			</td>
+			<td>
+			{{item.newprice|salaryFilter:"грн."}}
+			</td>
+			
+			<td>
+				<button class="btn btn-xs btn-danger" ng-click="cartDeleteItem(item)">
+				Видалити
+				</button>
+			</td>
+		</tr>
+	</table>
+	<div class="adminPanel">
+	<span class="textPrice"> Загальна вартість:</span>
+	<span class="valuePrice">{{cartTotalPrice()|salaryFilter:"грн."}}</span>
+	</div>
+	<button class="btn btn-sm btn-danger cartButton">
+	Очистити
+	</button>
+	<button class="btn btn-sm btn-success cartButton" ng-click="cartOrderView(cart)">
+	Оформити
+	</button>
+
+

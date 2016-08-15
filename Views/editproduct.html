@@ -1,0 +1,37 @@
+<div class="form-group">
+	<label>Фірма-виробник:</label>
+	<input class="form-control" ng-model="currentItem.name"></input>
+</div>
+<div class="form-group">
+	<label>Назва моделі:</label>
+	<input class="form-control" ng-model="currentItem.descname"></input>
+</div>
+<div class="form-group">
+	<label>Категорія:</label>
+	<input class="form-control" ng-model="currentItem.category"></input>
+</div>
+<div class="form-group">
+	<label>Кількість наявного товару:</label>
+	<input class="form-control" ng-model="currentItem.count"></input>
+</div>
+<div class="form-group">
+	<label>Ціна:</label>
+	<input class="form-control" ng-model="currentItem.price"></input>
+</div>
+
+<div class="adminUpload adminPanel">
+	
+	<form method="post" enctype="multipart/form-data" action="/uploadFile" target="result">
+		<input type="file" name="upl"></input>
+		<input class="btn btn-sm btn-success" type="submit" value="Завантажити файл"/>
+	</form>
+	<input type="text" class="form-control" ng-model="currentItem.path"></input>
+</div>
+<iframe name="result" class="adminFrame" current-item></iframe>
+<button class="btn btn-sm btn-primary" width="100" height="40" ng-click="saveEdit(currentItem)">
+	Зберегти
+</button>
+<button class="btn btn-sm btn-danger" ng-click="cancelEdit()">
+	Відмінити
+</button>
+

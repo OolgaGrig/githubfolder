@@ -1,0 +1,38 @@
+<html ng-app="MainApp">
+<head>
+	<title>Інтернет-магазин</title>
+	<meta charset="utf-8">
+	<script src="Lib/angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="Lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Lib/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="Lib/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="Lib/style.css">
+	<script src="Modules/cart.js"></script>
+	<script src="Modules/product.js"></script>
+	<script src="Modules/main.js"></script>
+	
+	
+	<body ng-controller="MainCtrl" class="adminBody" load-current>
+	
+	<div class="container">
+	<div class="adminPanel">
+		<ul class="nav nav-pills">
+  			<li role="presentation" class="active"><a href="#" ng-click="showShopProduct()" 
+  			add-class="active">Товари</a></li>
+  			<li role="presentation"><a href="#" ng-click="showShopCart()" 
+  			add-class="active" ><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> Корзина
+  			<span class="badge mybadge" ng-show="cartBadge>0">{{cartBadge}}</span>
+  			</a></li>
+		</ul>
+	</div>
+	</div>	
+	
+	<div ng-controller="ProductCtrl" class="container">
+		<div class="adminPanel">
+			<ng-include src="'Views/shopproduct.html'" ng-show="currentView=='shopProduct'"></ng-include>
+			<div ng-controller="CartCtrl">
+			<ng-include src="'Views/shopcart.html'" ng-show="currentView=='shopCart'"> </ng-include>
+			<ng-include src="'Views/cartorder.html'" ng-show="currentView=='cartOrder'"> </ng-include>
+			</div>
+	</div>
+	</body>

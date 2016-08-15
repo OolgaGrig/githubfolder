@@ -1,0 +1,50 @@
+<table class="table table-bordered table-striped" ng-repeat="item in cartorder">
+	<div class="panel-heading"><h3>Таблиця замовлень</h3><button class="btn btn-info" ng-click="adminproductShow()">Додати товар</button></div>
+		<tr >
+			<td><b>Замовлення</b>{{item._id}}<button class="btn btn-xs btn-success floatright" ng-click="finalorder(item)">Оформити</button><button class="btn btn-xs btn-danger floatright" ng-click="deleteorder(item)">Відмінити</button></td>
+		</tr>
+
+		<tr>
+			<td><b>Замовник:</b></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table class="mytable">
+					<tr>
+						<td>{{item.firstname}} {{item.lastname}}</td>
+						<td>{{item.mail}}</td>
+						<td>{{item.tel}}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>Товари:</b></td>
+		</tr>
+
+		<tr ng-repeat="pr in item.product">
+			<td>
+				<table class="mytable">
+					<tr>
+						<td>{{pr.name}} "{{pr.descname}}"</td>
+						<td>{{pr.newcount}} шт</td>
+						<td>{{pr.newprice|currency}}</td>
+						
+							<button class="btn btn-xs btn-danger floatright" ng-click="delOrdProd(pr, item)">Відмінити</button>
+							<button class="btn btn-xs btn-info floatright" ng-click="">Редагувати</button>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<b>Загальна вартість: {{item.total|currency}}</b>
+			</td>
+		</tr>
+
+
+	
+</table>

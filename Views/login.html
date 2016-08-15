@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Lib/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="Lib/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="Lib/style.css">
+</head>
+	
+<body>
+	<div class="container">
+	<div class="row">
+		<form action="/login" class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4" method="POST">
+		<div class="form-group">
+		<label class="loginHeader">Адміністрування eMyShop</label>
+		</div>
+		<div class="form-group">
+			<label class="loginLabel">Введіть логін</label>
+			<input name="username" type="text" placeholder="input login" class="form-control username">
+		</div>
+		<div class="form-group">
+			<label class="loginLabel">Введіть пароль</label>
+			<input name="password" type="text" placeholder="input password" class="form-control">
+		</div>
+		<div class="form-group">
+
+			<input type="submit" value="Вхід" class="btn btn-success form-control">
+		</div>
+
+		<div class="form-group" id="message"></div>
+
+
+		
+		</form>
+	</div>
+</div>
+</body>
+</html>

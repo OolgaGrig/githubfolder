@@ -1,0 +1,84 @@
+.loginHeader{
+	color:blue;
+	font-size:24px;
+	margin-top:100px;
+}
+.loginLabel{
+	color:blue;
+	font-size:14px;
+}
+.adminBody{
+	background-color:#337ab7;
+}
+.adminPanel{
+	background-color: white;
+	padding: 10px;
+	border:1px solid blue;
+	border-radius:5px;
+}
+.adminPanel .textPrice{
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	color:blue;
+	
+}
+.adminPanel .valuePrice{
+	font-family: Verdana;
+	font-size: 16px;
+	font-weight: bold;
+	color:red;
+	
+}
+.adminUpload{
+	margin:10px 0;
+	background-color: lightblue;
+}
+.adminUpload input{
+	margin-top:5px;
+}
+.adminFrame{
+	display:none;
+}
+.adminTable{
+	font-family: Verdana;
+	font-size: 14px;
+}
+.adminTable th,button{
+	color:blue;
+}
+.shopThumbnail{
+	font-family: Verdana;
+}
+.shopThumbnail img{
+	float:left;
+	margin:10px;
+}
+.shopThumbnail p~h4{
+	color:red;
+}
+.cartButton{
+	margin: 10px 0;
+	font-family: Verdana;
+	font-size: 12px;
+}
+.container{
+	margin-top: 10px;
+}
+.badge {
+  color: white;
+  background-color: red;
+}
+
+.clearfix:after,
+.clearfix:before{
+	content: " ";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+
+
+
+
